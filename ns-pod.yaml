@@ -4,7 +4,8 @@ metadata:
   name: test-ecommerce-web 
   namespace: test-ns 
 spec: 
-  - name: test-ecommerce 
-    image: muralisocial123/ecommerce-image:1.0
-    ports:
-      - containerPort: 80  
+  containers:
+    - name: test-ecommerce 
+      image: muralisocial123/ecommerce-image:1.0
+      ports:
+        - containerPort: 80  
