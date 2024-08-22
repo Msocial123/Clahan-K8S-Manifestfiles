@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: resto-web
+spec: 
+  containers:
+    - name: rest-cont
+      image: muralisocial123/resto-image:latest
+      ports:
+        - containerPort: 80 
