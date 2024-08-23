@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: python-app
+  namespace: test-ns
+spec: 
+  containers:
+    - name: python-pod 
+      image: muralisocial123/python-testing:9
+      ports:
+        - containerPort: 5000
+   
