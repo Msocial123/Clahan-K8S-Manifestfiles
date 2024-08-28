@@ -17,6 +17,5 @@ spec:
       containers:
         - image: muralisocial123/resto-image:latest
           name: sample-web 
-          ports:
-            - containerPort:80
+      
     
