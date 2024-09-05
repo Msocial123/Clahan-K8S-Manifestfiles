@@ -11,12 +11,12 @@ spec:
     metadata:
       labels: 
         app: node
-      spec:
-        containers:
-          - image: muralisocial123/ecommerce-web:latest
-            name: ecommerce-web 
-            ports:
-              - containerPort: 80
+    spec:
+      containers:
+        - image: muralisocial123/ecommerce-web:latest
+          name: ecommerce-web 
+          ports:
+            - containerPort: 80
 
    
 
