@@ -17,3 +17,17 @@ spec:
   selector:
     matchLabels:
       app: node-app
+---
+apiVersion: v1 
+kind: Service 
+metadata:
+  name: node-clusterip 
+spec:
+  ports:
+    - port: 3004
+      targetPort: 3000 
+      protocol: TCP
+  selector: 
+    app: node-app
+  type: ClusterIP   
+          
