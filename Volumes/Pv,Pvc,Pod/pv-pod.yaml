@@ -1,0 +1,13 @@
+apiVersion: v1 
+kind: PersistentVolume 
+metadata:
+  name: sample-pv 
+spec: 
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain 
+  gcePersistentDisk:
+    pdName: test-disk  
+    fsType: ext4  # Filesystem type, default is ext4        
