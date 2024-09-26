@@ -5,9 +5,8 @@ metadata:
 spec:
   restartPolicy: Never
   containers:
-    - image: busybox 
-      name: busybox 
-      command: ['sh', '-c', 'while true; do echo Welcome DevOps Training >> /output/output.txt; sleep5; done']
+    - image: muralisocial123/transcation-app:latest
+      name: transaction-app
       volumeMounts:
         - name: s-volume
           mountPath: /output
