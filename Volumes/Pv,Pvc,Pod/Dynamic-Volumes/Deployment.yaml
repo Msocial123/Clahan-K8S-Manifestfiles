@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: transcation-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app 
+    spec: 
+      containers:
+        - name: transaction-cont 
+          image: muralisocial123/node-app-image:latest
+          ports:
+            - containerPort: 80 
+          volumeMounts:
+            - name: my-volume 
+              mountPath: /data  
+      volumes:
+         - name: my-volume 
+           persistentVolumeClaim:
+             claimName: stoage-example
