@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: example-deployment 
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app 
+  template:
+    metadata:
+      labels:
+        app: node-app 
+      spec: 
+        containers:
+          - image: muralisocial123/node-app-image:latest
+            name: node-app-cont 
+            ports:
+              - containerPort: 3000 
+            env:
+              - name: MONGODB_URI
+                valueFrom:
+                  configMapKeyRef:
+                    name: example-config
+                    key: MONGODB_URI
+
+        

@@ -1,0 +1,30 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: example-deployment 
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app 
+  template:
+    metadata:
+      labels:
+        app: node-app 
+      spec: 
+        containers:
+          - image: muralisocial123/node-app-image:latest
+            name: node-app-cont 
+            ports:
+              - containerPort: 3000 
+            volumeMounts:
+              - name: database-config-volume 
+                mountPath: /etc/example-config      
+      volumes: 
+        - name: database-config-volume 
+          configMap:
+            name: example-config      
+               
+               
+
+        

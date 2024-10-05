@@ -1,0 +1,6 @@
+# This file to supply mandatory Metadata Like name , apiVersion, App version 
+apiVersion: v1 
+name: transcation
+version: 0.0.1 # This is chart version whenever you are going to make changes do the changes in Chart Version 
+description: This is to understand how to convert transcation application into helm chart 
+appVersion: 1.0.0 #This is application version whenever we are make changes in the application we have to do that
